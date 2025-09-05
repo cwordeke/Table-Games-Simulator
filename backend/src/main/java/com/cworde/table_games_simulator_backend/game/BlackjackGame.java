@@ -83,4 +83,20 @@ public class BlackjackGame {
             this.gameStatus = "PUSH";
         }
     }
+
+    public String getGameStatus() {
+        return gameStatus;
+    }
+
+    public int getBet() {
+        return this.bet;
+    }
+
+    public Hand getPlayerHand() {
+        return this.playerHand;
+    }
+
+    public Hand getDealerHand() {
+        return this.dealerHand;
+    }
 }
