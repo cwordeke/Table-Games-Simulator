@@ -36,4 +36,10 @@ public class BlackjackController {
     public BlackjackGameState stand() {
         return gameService.playerStand();
     }
+
+    // /double endpoint
+    @PostMapping("/double")
+    public BlackjackGameState playerDouble() {
+        return gameService.playerDouble();
+    }
 }

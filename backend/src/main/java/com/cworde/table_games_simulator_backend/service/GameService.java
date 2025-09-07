@@ -58,13 +58,20 @@ public class GameService {
         switch(status) {
             case "PLAYER_BJ":
                 playerProfile.setChips(playerProfile.getChips() + (int)(bet * 2.5));
+                playerProfile.setGamesWon(playerProfile.getGamesWon() + 1);
                 break;
             case "PLAYER_WIN":
             case "DEALER_BUST":
                 playerProfile.setChips(playerProfile.getChips() + (bet * 2));
+                playerProfile.setGamesWon(playerProfile.getGamesWon() + 1);
                 break;
             case "PUSH":
                 playerProfile.setChips(playerProfile.getChips() + bet);
+                playerProfile.setGamesPushed(playerProfile.getGamesPushed() + 1);
+                break;
+            default:
+                playerProfile.setGamesLost(playerProfile.getGamesLost() + 1);
+                break;
         }
     }
 
@@ -75,11 +82,7 @@ public class GameService {
 
         currentGame.playerHit(); // Call BlackjackGame
 
-        // If the hit busts the player
-        if (currentGame.getGameStatus().equals("PLAYER_BUSTS")) {
-            resolveBet();
-        }
-
+        // If the hit busts the player we do nothing (player just loses their money)
         return createGameStateDTO();
     }
 
@@ -90,7 +93,20 @@ public class GameService {
 
         currentGame.playerStand(); // Call BlackjackGame
         resolveBet(); // Game is always over once stand
+        return createGameStateDTO();
+    }
 
+    public BlackjackGameState playerDouble() {
+        if (currentGame == null) {
+            throw new IllegalStateException("Game has not started");
+        }
+
+        if (currentGame.getPlayerHand().getCards().size() != 2) {
+            throw new IllegalStateException("Player can only double with two cards");
+        }
+
+        currentGame.playerDouble();
+        resolveBet();
         return createGameStateDTO();
     }
 }
