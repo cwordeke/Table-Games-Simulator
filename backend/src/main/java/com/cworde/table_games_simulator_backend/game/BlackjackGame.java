@@ -1,7 +1,5 @@
 package com.cworde.table_games_simulator_backend.game;
 
-import java.util.ArrayList;
-
 public class BlackjackGame {
     private final Deck deck;
     private final Hand playerHand;
