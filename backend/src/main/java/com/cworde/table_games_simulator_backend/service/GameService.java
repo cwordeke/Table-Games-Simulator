@@ -67,4 +67,30 @@ public class GameService {
                 playerProfile.setChips(playerProfile.getChips() + bet);
         }
     }
+
+    public BlackjackGameState playerHit() {
+        if (currentGame == null) {
+            throw new IllegalStateException("Game has not started");
+        }
+
+        currentGame.playerHit(); // Call BlackjackGame
+
+        // If the hit busts the player
+        if (currentGame.getGameStatus().equals("PLAYER_BUSTS")) {
+            resolveBet();
+        }
+
+        return createGameStateDTO();
+    }
+
+    public BlackjackGameState playerStand() {
+        if (currentGame == null) {
+            throw new IllegalStateException("Game has not started");
+        }
+
+        currentGame.playerStand(); // Call BlackjackGame
+        resolveBet(); // Game is always over once stand
+
+        return createGameStateDTO();
+    }
 }
