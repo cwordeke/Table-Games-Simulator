@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <!--Meta-information-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table Games Simulator</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+        <!--Headings-->
+    <body>
+        <header>
+            <h1>
+                Table Games Simulator
+            </h1>
+        </header>
+        <nav>
+            <button id="home-btn">Home</button>
+            <button id="blackjack-btn">Blackjack</button>
+        </nav>
+            <div id="chips-display">
+                <span id="currency-symbol">C$</span>
+                <span id="chip-amount">1000</span>
+            </div>
+    </body>
+
+    <!--Main-->
+    <main>
+        <section id="home-view" class="view">
+            
+        </section>
+
+        <section id="blackjack-view", class="view">
+            <div id="game-board">
+                <div id="dealer-hand">
+                    <span id="dealer-score">
+
+                    </span>
+                </div>
+
+                <div id="player-hand">
+                    <span id="player-score">
+
+                    </span>
+                </div>
+
+                <div id="blackjack-message">
+                    This is a message!
+                </div>
+
+                <div id="controls">
+                <div id="betting-controls">
+                    Bet:
+                    <input id="bet-amount" type="number" value="50">
+                </div>
+                <div>
+                    <button id="deal-btn">Deal</button>
+                </div>
+                <div id="action-controls">
+                    <button id="hit-btn">Hit</button>
+                    <button id="stand-btn">Stand</button>
+                    <button id="double-btn">Double</button>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</html>

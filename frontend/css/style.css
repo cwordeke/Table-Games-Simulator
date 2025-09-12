@@ -1,0 +1,176 @@
+body {
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a3a1a;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #111;
+    padding: 10px;
+    border-bottom: 2px solid #b8860b
+}
+
+h1 {
+    margin: 0;
+    color: #b8860b;
+    font-size: 2.2em;
+}
+
+nav {
+    padding: 10px;
+    background-color: #222;
+}
+
+nav button {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+
+nav button:hover {
+    background-color: #b8860b;
+    border-color: #fff;
+}
+
+#chips-display {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #b8860b;
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin-top: 15px;
+    box-shadow: inset 0 0 10px #000;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+#currency-symbol {
+    color: #b8860b;
+    margin-right: 4px;
+    font-size: 0.9em;
+}
+
+/* --- Main Content & Views --- */
+main {
+    padding: 20px;
+}
+
+.view {
+    /* Styles for main content sections */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Blackjack Game Board Styling --- */
+#game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.hand-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    min-height: 150px;
+    border: 2px solid #b8860b;
+}
+
+.hand-container h2 {
+    margin-top: 0;
+    color: #b8860b;
+}
+
+#player-hand, #dealer-hand {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* --- Messages and Controls --- */
+#blackjack-message {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #ffc107;
+    height: 30px;
+    margin: 20px 0;
+}
+
+#betting-controls {
+    font-size: 1.5em;
+    color: #ffc107;
+}
+
+/* Action Buttons */
+#action-controls button {
+    background-color: #b8860b;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+#action-controls button:hover {
+    transform: scale(1.05);
+}
+
+#action-controls button:active {
+    transform: scale(0.97);
+}
+
+#action-controls button:disabled {
+    background-color: #555;
+    color: #888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Deal + Bet input */
+#deal-btn {
+    background-color: #b8860b;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+#betting-controls input {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 15px;
+    font-size: 1.0em;
+    width: 75px;
+    text-align: center;
+    border: 1px solid #b8860b;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
