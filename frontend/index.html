@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 
-    <!--Meta-information-->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
 
-        <!--Headings-->
     <body>
         <header>
             <h1>
@@ -20,51 +18,52 @@
             <button id="home-btn">Home</button>
             <button id="blackjack-btn">Blackjack</button>
         </nav>
-            <div id="chips-display">
-                <span id="currency-symbol">C$</span>
-                <span id="chip-amount">1000</span>
-            </div>
+        <div id="chips-display">
+            <span id="currency-symbol">C$</span>
+            <span id="chip-amount">1000</span>
+        </div>
+
+        <main>
+            <section id="home-view" class="view">
+                </section>
+
+            <section id="blackjack-view" class="view">
+                <div id="game-board">
+                    <div class="hand-container">
+                        <h2>Dealer's Hand (<span id="dealer-score">0</span>)</h2>
+                        <div id="dealer-hand"></div>
+                    </div>
+                    <div class="hand-container">
+                        <h2>Player's Hand (<span id="player-score">0</span>)</h2>
+                        <div id="player-hand"></div>
+                    </div>
+                    <div id="dealer-hand">
+                        <span id="dealer-score"></span>
+                    </div>
+                    <div id="player-hand">
+                        <span id="player-score"></span>
+                    </div>
+                    <div id="blackjack-message">
+                        Place a bet to start a hand
+                    </div>
+                    <div id="controls">
+                        <div id="betting-controls">
+                            Bet:
+                            <input id="bet-amount" type="number" value="50">
+                        </div>
+                        <div id="deal-button">
+                            <button id="deal-btn">Deal</button>
+                        </div>
+                        <div id="action-controls">
+                            <button id="hit-btn">Hit</button>
+                            <button id="stand-btn">Stand</button>
+                            <button id="double-btn">Double</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="js/main.js"></script>
     </body>
-
-    <!--Main-->
-    <main>
-        <section id="home-view" class="view">
-            
-        </section>
-
-        <section id="blackjack-view", class="view">
-            <div id="game-board">
-                <div id="dealer-hand">
-                    <span id="dealer-score">
-
-                    </span>
-                </div>
-
-                <div id="player-hand">
-                    <span id="player-score">
-
-                    </span>
-                </div>
-
-                <div id="blackjack-message">
-                    This is a message!
-                </div>
-
-                <div id="controls">
-                <div id="betting-controls">
-                    Bet:
-                    <input id="bet-amount" type="number" value="50">
-                </div>
-                <div>
-                    <button id="deal-btn">Deal</button>
-                </div>
-                <div id="action-controls">
-                    <button id="hit-btn">Hit</button>
-                    <button id="stand-btn">Stand</button>
-                    <button id="double-btn">Double</button>
-                </div>
-            </div>
-            </div>
-        </section>
-    </main>
 </html>

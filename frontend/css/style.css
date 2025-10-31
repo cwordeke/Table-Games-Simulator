@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* --- Header and Navigation --- */
+/* Header and Navigation */
 header {
     background-color: #111;
     padding: 10px;
@@ -62,7 +62,7 @@ nav button:hover {
     font-size: 0.9em;
 }
 
-/* --- Main Content & Views --- */
+/* Main Content & Views */
 main {
     padding: 20px;
 }
@@ -75,7 +75,7 @@ main {
     display: none !important;
 }
 
-/* --- Blackjack Game Board Styling --- */
+/* Blackjack Game Board Styling */
 #game-board {
     display: flex;
     flex-direction: column;
@@ -84,12 +84,19 @@ main {
     margin-bottom: 20px;
 }
 
+.card {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 .hand-container {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    min-height: 150px;
+    min-height: 250px;
     border: 2px solid #b8860b;
 }
 
@@ -104,13 +111,13 @@ main {
     gap: 10px;
 }
 
-/* --- Messages and Controls --- */
+/* Messages and Controls */
 #blackjack-message {
     font-size: 1.5em;
     font-style: italic;
     color: #ffc107;
     height: 30px;
-    margin: 20px 0;
+    margin: 10px;
 }
 
 #betting-controls {

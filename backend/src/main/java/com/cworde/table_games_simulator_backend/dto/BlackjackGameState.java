@@ -11,6 +11,7 @@ public class BlackjackGameState {
     private int dealerSum;
     private String gameStatus;
     private int playerChipBalance;
+    private int bet;
 
     public List<Card> getPlayerHand() {
         return playerHand;
@@ -58,5 +59,13 @@ public class BlackjackGameState {
 
     public void setPlayerChipBalance(int playerChipBalance) {
         this.playerChipBalance = playerChipBalance;
+    }
+
+    public int getBet() {
+        return bet;
+    }
+
+    public void setBet(int bet) {
+        this.bet = bet;
     }
 }
